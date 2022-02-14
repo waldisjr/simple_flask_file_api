@@ -1,0 +1,12 @@
+description: Success
+content:
+  application/json:
+    schema:
+      properties:
+        result:
+         type: boolean
+        message:
+          type: string
+    example:
+      result: True
+      message: "Basic files API. For documentation contact creator: t.me/waldis_jr"

@@ -1,0 +1,13 @@
+openapi: "3.0.3"
+
+info:
+  $ref: 'components/info.yaml'
+
+servers:
+  $ref: 'components/servers.yaml'
+
+tags:
+  $ref: 'components/tags.yaml'
+
+paths:
+  $ref: 'components/paths.yaml'

@@ -1,0 +1,4 @@
+- url: //default.com/production
+  description: Development environment.
+- url: //default.com/test
+  description: Testing environment.

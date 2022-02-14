@@ -1,0 +1,5 @@
+- name: new_content
+  in: query
+  description: New content
+  schema:
+    type: string

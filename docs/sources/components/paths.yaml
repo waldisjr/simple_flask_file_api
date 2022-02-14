@@ -1,0 +1,108 @@
+/:
+  get:
+    tags:
+      - index
+    summary: Show info about API
+    responses:
+      '200':
+        $ref: "models/index_200.yaml"
+
+
+/file/:
+  get:
+    tags:
+      - file
+    summary: Get file content.
+    description:
+    operationId: get_file_content
+
+    responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              properties:
+                result:
+                  type: boolean
+                file_content:
+                  type: list
+            example:
+              result: True
+              file_content: ["test\n", "qwerty"]
+
+  delete:
+    tags:
+      - file
+    summary: Clear file content.
+    description:
+    operationId: clear_file_content
+
+    responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              properties:
+                result:
+                  type: boolean
+                message:
+                  type: string
+            example:
+              result: True
+              message: "File was cleared."
+
+  post:
+    tags:
+      - file
+    summary: Wrewrite file content.
+    description:
+    operationId: rewrite_file_content
+    parameters:
+      $ref: "models/file_request_body.yaml"
+    responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              properties:
+                result:
+                 type: boolean
+                message:
+                  type: string
+            example:
+              result: True
+              message: "File content was rewritten."
+      '400':
+        $ref: "models/file_400.yaml"
+
+  patch:
+    tags:
+      - file
+    summary: Add new content.
+    description: Add new content to the end of the file.
+    operationId: add_new_content
+    parameters:
+      $ref: "models/file_request_body.yaml"
+    responses:
+      '200':
+        description: Success
+        content:
+          application/json:
+            schema:
+              properties:
+                result:
+                 type: boolean
+                message:
+                  type: string
+            example:
+              result: True
+              message: "New content was added to file."
+      '400':
+        $ref: "models/file_400.yaml"
+
+
+
+

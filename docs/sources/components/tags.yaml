@@ -1,0 +1,7 @@
+- name: index
+  description:
+  x-displayName: Info
+- name: file
+  description:
+  x-displayName: File methods
+
